@@ -1,4 +1,4 @@
 <div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Search for something..." aria-label="Search">
-  <button class="btn btn-primary" type="button">Search</button>
+  <input type="text" class="form-control" placeholder="Search for something..." aria-label="Search" (input)="onSearch($event.target.value)">
+  <button class="btn btn-primary" type="button" (click)="onSearch(searchInput.value)">Search</button>
 </div>

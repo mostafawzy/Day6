@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
-import { FormsModule } from '@angular/forms'; 
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-list',
@@ -12,7 +12,8 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent {
-
+  @Input() searchTerm: string = '';
+  
   list=
   [
   {
@@ -254,6 +255,13 @@ export class ListComponent {
     "is_verified": false
   }
 ];
+get filteredList() {
+  if (!this.searchTerm) {
+    return this.list;
+  }
+  return this.list.filter(user => user.username.toLowerCase().includes(this.searchTerm.toLowerCase()));
 }
+}
+
 
 

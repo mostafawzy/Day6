@@ -1,6 +1,6 @@
 <div class="container-fluid">
-  <app-search></app-search>
+  <app-search (search)="onSearch($event)"></app-search>
   <div class="container mt-5">
-    <app-list></app-list>
+    <app-list [list]="filteredList"></app-list>
   </div>
 </div>

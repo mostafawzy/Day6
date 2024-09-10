@@ -13,4 +13,9 @@ import { MatCardModule } from '@angular/material/card';
 })
 export class AppComponent {
   title = 'app2';
+  searchTerm: string = '';
+
+  onSearch(term: string) {
+    this.searchTerm = term;
+  }
 }
