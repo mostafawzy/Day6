@@ -1,0 +1,17 @@
+
+.input-group {
+    max-width: 400px;
+    margin: 30px;
+    margin-left: 37% ;
+  }
+  
+  .form-control {
+    border-radius: 10;
+  }
+  
+  .btn-primary {
+    
+    border-radius: 80;
+    background-color:rgba(245, 227, 249, 0.737);
+  }
+  

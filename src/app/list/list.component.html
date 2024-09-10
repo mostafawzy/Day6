@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="card-container">
+    @for (user of list; track user.id; let i = $index) {
+      <div class="card-wrapper">
+        <mat-card class="user-card">
+          <mat-card-header>
+            <div class="user-image-container">
+              <img mat-card-avatar [src]="user.image" alt="User Image" class="user-image" />
+            </div>
+            
+          </mat-card-header>
+          <mat-card-content>
+            <h2 class="user-name">{{ user.username }}
+              <span  class="verified-icon">
+                <mat-icon [ngStyle]="{'color': user.is_verified ? 'green' : 'red'}">
+                  {{ user.is_verified ? 'verified' : 'cancel' }}
+                </mat-icon>
+              </span>
+            </h2>
+            
+            <p class="mat-subtitle">Email: {{ user.email }}</p>
+            <p class="mat-subtitle">Phone: {{ user.phone }}</p>
+            
+          </mat-card-content>
+
+        </mat-card>
+      </div>
+    }
+    @if (list.length === 0) {
+      <h1>No Users Found!</h1>
+    }
+  </div>
+</div>

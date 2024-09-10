@@ -1,0 +1,39 @@
+.container{
+    margin-left: 30px;
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  
+  .card-wrapper {
+    flex: 0 0 auto;
+    margin: 30px;
+  }
+  
+  .user-card {
+    width: 240px;
+    height: 280px;
+    border-radius: 8px;
+  }
+  
+  .user-image-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .user-image {
+    margin-left: 70px;
+    width: 64px;
+    height: 64px;
+    border: 2px solid #f5e9e9;
+  }
+  .user-name{
+    color:darkred;
+    font-size:x-large;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  .mat-subtitle{
+    font-size: small;
+  }
